@@ -1,6 +1,6 @@
 # 🧠 SmartMenu MCP Server
 
-This is the **Model Context Protocol (MCP) server** for [SmartMenu](https://github.com/your-org/smartmenu), an AI-powered assistant that helps customers interact with restaurant menus through natural language.
+This is the **Model Context Protocol (MCP) server** for [SmartMenu](https://github.com/logeshselvam/render-deploy-fe), an AI-powered assistant that helps customers interact with restaurant menus through natural language.
 
 The MCP server acts as a bridge between large language models (LLMs) like GPT-4 and your structured menu data. It exposes tools and resources that allow the model to reason over real menus and provide grounded, context-aware recommendations.
 
