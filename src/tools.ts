@@ -214,6 +214,7 @@ export async function initializeTools(agent: MenuMCP) {
         return {
           content: [
             createTextContent(`Details for \"${item.name}\" - $${item.price}`),
+            createTextContent(item.description ? `Description: ${item.description}` : "No description available."),
             createMenuItemResourceContent(item),
           ],
         };
@@ -296,6 +297,7 @@ export async function initializeTools(agent: MenuMCP) {
                     id: item.id,
                     name: item.name,
                     price: item.price,
+                    description: item.description,
                     tags: item.tags,
                     rating: item.rating,
                   })),
@@ -304,7 +306,10 @@ export async function initializeTools(agent: MenuMCP) {
                 2
               )
             ),
-            ...filteredItems.map((item) => createMenuItemResourceContent(item)),
+            ...filteredItems.map((item) => [
+              createTextContent(item.description ? `Description: ${item.description}` : "No description available."),
+              createMenuItemResourceContent(item)
+            ]).flat(),
           ],
         };
       } catch (error) {
